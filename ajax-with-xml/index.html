@@ -1,0 +1,28 @@
+<!DOCTYPE html> <!-- Tells the browser this is HTML 5 -->
+
+<html>
+<head>
+    <title>AJAX demo with XML response</title>
+    <link rel="stylesheet" type="text/css" href="style.css" /> <!-- Pulls in the CSS to make things look nice -->
+    <script src="ajax-xml.js" type="text/javascript"></script> <!-- Pulls in the contents of ajax-xml.js -->
+</head>
+<body>
+    <form method="get">
+        <label for="customer">Select a customer:</label>
+        <select id="customer">
+            <option value="Bruce Wayne">Bruce Wayne</option>
+            <option value="Kuat of Kuat">Kuat of Kuat</option>
+            <option value="Lando Calrissian">Lando Calrissian</option>
+        </select>
+    </form>
+
+    <!--
+        Contact info can be represented with the hCard microformat, but let's not do that right now.
+        More info here: http://microformats.org/wiki/hcard
+    -->
+    <span id="companyName">Wayne Enterprises</span>
+    <span id="address">Wayne Tower</span>
+    <span id="city">Gotham City</span>
+    <span id="country">United States</span>
+</body>
+</html>
