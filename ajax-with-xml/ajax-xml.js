@@ -82,7 +82,6 @@ window.onload = function() {
             xmlDoc;
 
         if (xhr !== null) {
-
             /**
              * Attach a function to run when the XHR's readyState changes, which usually 
              * means something noteworthy has happened. We're particularly interested
