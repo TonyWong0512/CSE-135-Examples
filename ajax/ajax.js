@@ -28,7 +28,7 @@ window.onload = function() {
         }
         catch (e) {
             try {
-                // Older versions of IE use ActiveX for XMLHttpRequests. "MSXML2" refers to the 
+                // Older versions of IE use ActiveX for XMLHttpRequests. "Mxml2" refers to the 
                 // current version of Microsoft's MSXML library, whatever its number happens to be.
                 xhr = new ActiveXObject('Msxml2.XMLHTTP');
             }
@@ -63,7 +63,7 @@ window.onload = function() {
              *     http://www.webdevstuff.com/86/javascript-xmlhttprequest-object.html
              */
             xhr.onreadystatechange = function() {
-                if (this.readyState === 4) {
+                if (this.readyState === 4 && this.status === 200) {
                     document.getElementById('lastUpdated').innerHTML = 'You last typed on ' + this.responseText;
                 }
             };
