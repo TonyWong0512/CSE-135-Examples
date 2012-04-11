@@ -1,20 +1,21 @@
 /**
  * XMLHttpRequest with XML results. This is a reference for CSE 135 at UCSD.
  *
- * Because this code uses parts of the document that haven't been made yet when it runs,
- * we don't want to run it until everything is ready. Attaching it to the window's "load"
- * event, triggered when all the content is loaded, ensures it won't run early.
+ * Because this code uses parts of the document that haven't been created when the <head>
+ * section is parsed, we don't want to run it until everything is ready. Attaching it to 
+ * the window's "load" event, triggered when all the content is loaded, ensures that it 
+ * won't run early.
  *
  * For situations like this, Javascript allows functions to be defined inside other functions.
  * More on that later.
  */
 window.onload = function() {
     /**
-     * Returns an object used to make AJAX requests. We need this because
+     * Returns an object used to make AJAX requests. We need this function because
      * some browsers (mostly old IEs) don't provide AJAX support the standard way.
      *
      * This example uses nested try/catch because it's easier to read, but a real 
-     * implementation could be less ugly. Don't try this at work.
+     * implementation could be better and less ugly. Don't try this at work.
      */
     function getXmlHttpRequest() {
         var xhr = null;

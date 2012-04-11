@@ -1,17 +1,21 @@
 /**
  * A basic XMLHttpRequest demo for CSE 135 at UCSD.
  *
- * Because this code uses parts of the document that haven't been made yet when it runs,
- * we don't want to run it until everything is ready. Attaching it to the window's "load"
- * event, triggered when all the content is loaded, ensures it won't run early.
+ * Because this code uses parts of the document that haven't been created when the <head>
+ * section is parsed, we don't want to run it until everything is ready. Attaching it to 
+ * the window's "load" event, triggered when all the content is loaded, ensures that it 
+ * won't run early.
+ *
+ * For situations like this, Javascript allows functions to be defined inside other functions.
+ * More on that later.
  */
 window.onload = function() {
     /**
-     * Returns an object used to make AJAX requests. We need this because
-     * some browsers (mostly old IEs) don't follow the XMLHttpRequest standard.
+     * Returns an object used to make AJAX requests. We need this function because
+     * some browsers (mostly old IEs) don't provide AJAX support the standard way.
      *
-     * This example uses nested try/catch because it's easier to read, but a 
-     * real implementation could be a lot less ugly.
+     * This example uses nested try/catch because it's easier to read, but a real
+     * implementation could be better and less ugly. Don't try this at work.
      */
     function getXmlHttpRequest() {
         var xhr = null;
@@ -25,7 +29,7 @@ window.onload = function() {
         catch (e) {
             try {
                 // Older versions of IE use ActiveX for XMLHttpRequests. "MSXML2" refers to the 
-                // current version of Microsoft's MSXML library.
+                // current version of Microsoft's MSXML library, whatever its number happens to be.
                 xhr = new ActiveXObject('Msxml2.XMLHTTP');
             }
             catch (e) {
