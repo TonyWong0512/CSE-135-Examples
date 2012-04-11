@@ -1,3 +1,4 @@
+<%-- Don't forget to set the content type. This tells the client that it's getting JSON. --%>
 <% response.setContentType("text/json"); %>
 
 <%

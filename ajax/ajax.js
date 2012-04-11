@@ -13,6 +13,11 @@ window.onload = function() {
     /**
      * Returns an object used to make AJAX requests. We need this function because
      * some browsers (mostly old IEs) don't provide AJAX support the standard way.
+     * 
+     * You should note the bad terminology here -- we use terms like "XHR" and 
+     * "XML HTTP request" for both the XMLHttpRequest object (which lets us send requests) 
+     * and the asynchronous requests it actually sends. What we're getting and returning 
+     * here is the former.
      *
      * This example uses nested try/catch because it's easier to read, but a real
      * implementation could be better and less ugly. Don't try this at work.
@@ -33,15 +38,10 @@ window.onload = function() {
                 xhr = new ActiveXObject('Msxml2.XMLHTTP');
             }
             catch (e) {
-                try {
-                    // Really old versions of IE will use the older "Microsoft" namespace, so 
-                    // we'll keep that as a fallback.
-                    xhr = new ActiveXObject('Microsoft.XMLHTTP');
-                }
-                catch (e) {
-                    // Nothing left to try.
-                    // jetpack.jpg
-                }
+                // Some implementations of this function test for other kinds of ActiveX objects
+                // in IE, but I'm leaving them out to avoid any more try/catches. This should 
+                // be good enough for class, and in real life you should just use a library to 
+                // handle this stuff. It's not worth your time.
             }
         }
 
@@ -71,9 +71,9 @@ window.onload = function() {
             // Set up a GET request for date.jsp.
             xhr.open('GET', 'date.jsp');
 
-            // Send it off. Since we're using GET to send the data, the request payload 
-            // can be null.
-            xhr.send(null);
+            // Send it off. Since we're using GET to send the data, the payload argument 
+            // to send() can be omitted.
+            xhr.send();
         }
     }
 

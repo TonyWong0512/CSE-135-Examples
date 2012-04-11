@@ -1,3 +1,4 @@
+<%-- Don't forget to set the content type. Things can break if you don't do this. --%>
 <% response.setContentType("text/xml"); %>
 
 <%
