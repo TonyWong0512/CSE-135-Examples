@@ -89,8 +89,8 @@ window.onload = function() {
                     // JSON must be parsed into a Javascript object before we
                     // can use it. Do NOT use eval() for this.
                     //
-                    // Modern browsers provide JSON.parse() and JSON.stringify() for
-                    // JSON -> object and object -> JSON conversions,
+                    // Modern browsers provide JSON.parse() and JSON.stringify()
+                    // for JSON -> object and object -> JSON conversions,
                     // respectively, but ideally we'd have a fallback parsing
                     // function for the dinosaurs.
                     //
