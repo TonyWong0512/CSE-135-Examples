@@ -1,4 +1,7 @@
-<%-- Don't forget to set the content type. Things can break if you don't do this. --%>
+<%--
+    A simple endpoint that outputs some XML based on the query parameters.
+    Don't forget to set the content type. Things can break if you don't do this.
+--%>
 <% response.setContentType("text/xml"); %>
 
 <%
@@ -15,8 +18,7 @@ if (customerName != null) {
             <country>United States</country>
         </company>
 
-    <% }
-    else if (customerName.equals("Kuat of Kuat")) { %>
+    <% } else if (customerName.equals("Kuat of Kuat")) { %>
 
         <company>
             <name>Kuat Drive Yards</name>
@@ -25,8 +27,7 @@ if (customerName != null) {
             <country>A Galaxay Far, Far Away</country>
         </company>
 
-    <% }
-    else if (customerName.equals("Lando Calrissian")) { %>
+    <% } else if (customerName.equals("Lando Calrissian")) { %>
 
         <company>
             <name>Cloud City</name>

@@ -1,4 +1,8 @@
-<%-- Don't forget to set the content type. This tells the client that it's getting JSON. --%>
+<%--
+    A really simple JSON endpoint.
+    Don't forget to set the content type. This tells the client that it's
+    getting JSON.
+--%>
 <% response.setContentType("text/json"); %>
 
 <%
@@ -15,8 +19,7 @@ if (customerName != null) {
             "country": "United States"
         }
 
-    <% }
-    else if (customerName.equals("Kuat of Kuat")) { %>
+    <% } else if (customerName.equals("Kuat of Kuat")) { %>
 
         {
             "name": "Kuat Drive Yards",
@@ -25,8 +28,7 @@ if (customerName != null) {
             "country": "A Galaxy Far, Far Away"
         }
 
-    <% }
-    else if (customerName.equals("Lando Calrissian")) { %>
+    <% } else if (customerName.equals("Lando Calrissian")) { %>
 
         {
             "name": "Cloud City",

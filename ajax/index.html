@@ -1,16 +1,20 @@
-<!DOCTYPE html> <!-- Tells the browser this page intends to follow web standards -->
+<!DOCTYPE html> <!-- Tells the browser this page is compliant HTML 5 -->
 
 <html>
 <head>
     <title>Simple AJAX Demo</title>
-    <link rel="stylesheet" type="text/css" href="style.css" /> <!-- Pulls in CSS so things look nice -->
-    <script src="ajax.js"></script> <!-- Pulls in the contents of ajax.js -->
+    <!-- Pulls in CSS so things look nice -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Pulls in the contents of ajax.js -->
+    <script src="ajax.js"></script>
 </head>
 <body>
     <form method="get">
         <label for="story">Write your story here</label>
         <textarea id="story"></textarea>
-        <div id="lastUpdated"><!-- Timestamps pulled in through AJAX will go here --></div>
+        <div id="lastUpdated">
+            <!-- Timestamps pulled in through AJAX will go here -->
+        </div>
     </form>
 </body>
 </html>
